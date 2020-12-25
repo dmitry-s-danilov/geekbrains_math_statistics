@@ -1,0 +1,8 @@
+# course materials
+materials/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# vim temporaries
+*~
