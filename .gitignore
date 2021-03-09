@@ -1,8 +1,8 @@
 # course materials
 materials/
 
-# Python byte compiled 
-__pycache__
+# Python byte-compiled
+__pycache__/
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
