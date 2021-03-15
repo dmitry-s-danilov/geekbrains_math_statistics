@@ -7,28 +7,30 @@ x = [35, 45, 190, 200, 40, 70, 54, 150, 120, 110]
 y = [401, 574, 874, 919, 459, 739, 653, 902, 746, 832]
 
 # Find covariances and correlations.
+x = np.array(x)
+y = np.array(y)
 results = {
     'x-variance': [
         covariance(x, x),
-        np.cov(np.array(x), bias=True),
+        np.cov(x, bias=True),
         pd.DataFrame({'x': x, 'y': y}).cov(ddof=0).loc['x', 'x']
     ],
 
     'y-variance': [
         covariance(y, y),
-        np.cov(np.array(y), bias=True),
+        np.cov(y, bias=True),
         pd.DataFrame({'x': x, 'y': y}).cov(ddof=0).loc['y', 'y']
     ],
             
     'xy-covariance': [
         covariance(x, y),
-        np.cov(np.array(x), np.array(y), bias=True)[0, 1],
+        np.cov(x, y, bias=True)[0, 1],
         pd.DataFrame({'x': x, 'y': y}).cov(ddof=0).loc['x', 'y']
     ],
     
     'xy-correlation': [
         correlation_coefficient(x, y),
-        np.corrcoef(np.array(x), np.array(y))[0, 1],
+        np.corrcoef(x, y)[0, 1],
         pd.DataFrame({'x': x, 'y': y}).corr().loc['x', 'y']        
     ]
 }
