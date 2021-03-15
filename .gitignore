@@ -1,6 +1,9 @@
 # course materials
 materials/
 
+# Python virtual envitonment
+.venv/
+ 
 # Python byte-compiled
 __pycache__/
 
