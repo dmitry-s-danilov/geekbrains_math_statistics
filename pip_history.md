@@ -12,6 +12,7 @@ python -m pip install --upgrade pip
 pip install numpy
 pip install pandas
 pip install scipy
+pip install matplotlib
 ```
 
 ```bash
@@ -24,4 +25,6 @@ pip freeze > requirements.txt
 pip install ipykernel
 python -m ipykernel install --user --name=math_statistics
 cat ~/.local/share/jupyter/kernels/math_statistics/kernel.json 
+
+pip install ipykernel cloudpickle
 ```
